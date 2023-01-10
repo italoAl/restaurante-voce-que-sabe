@@ -1,0 +1,16 @@
+$fonte: 'Ropa Sans';
+$bgHome:'/assets/background/restaurantebg.jpg';
+$bgColorNav:rgba(0, 0, 0, 0.8);
+$link: red;
+$linkHover: #fff;
+$m1: 1rem;
+$mx1:0 1.2rem;
+$p1:1rem;
+$px1:0 1.3rem;
+
+* {
+    font-family:$fonte;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

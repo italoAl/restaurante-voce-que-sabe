@@ -1,0 +1,89 @@
+@use 'variaveis' as v;
+@use 'mixins' as mx;
+@use 'extends';
+
+.logo__slogan {
+    font-size: 3.5rem;
+    background-color: v.$bgColorNav;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px rgba(brown, 0.9)
+}
+
+.navbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: v.$bgColorNav;
+
+&__nav{
+    @extend %list-none;
+}
+&__link {
+    color: v.$linkHover;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    &:hover {
+        color: v.$link;
+        }
+    }
+}
+.socialMedia__icons {
+    @extend %list-none;
+}
+
+
+.m-1 {
+    margin: v.$m1;
+}
+
+.mx-1 {
+    margin: v.$mx1;
+}
+
+.p-1 {
+    padding: v.$p1;
+}
+
+.containerBox {
+    @include mx.box;
+    background-image: url(mx.bgImage(v.$bgHome));
+    background-size: 88%;
+    background-position-y: -310px;
+}
+
+.header-heightMiddle {
+    height: 300px;
+}
+
+.container {
+    @include mx.flex-center;
+}
+
+.text-white {
+    color: v.$linkHover;
+}
+
+
+@media(max-width:1100px) {
+
+    .containerBox,
+    .navbar__nav {
+        flex-flow: column;
+        min-width: 100%;
+    }
+    .navbar{
+        z-index:1;
+    }
+    .socialMedia{
+        z-index:2;
+    &__icons {
+        flex-flow: column;
+    }
+    &__item{
+        margin:v.$m1;
+    }
+}
+}

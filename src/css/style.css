@@ -1,0 +1,92 @@
+* {
+  font-family: "Ropa Sans";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar__nav, .socialMedia__icons {
+  list-style: none;
+}
+
+.logo__slogan {
+  font-size: 3.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 1px rgba(165, 42, 42, 0.9);
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar__link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.navbar__link:hover {
+  color: red;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.mx-1 {
+  margin: 0 1.2rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.containerBox {
+  min-width: 1170px;
+  margin: auto;
+  padding: 1.5rem 0;
+  width: 100%;
+  position: relative;
+  background-image: url("/assets/background/restaurantebg.jpg");
+  background-size: 88%;
+  background-position-y: -310px;
+}
+
+.header-heightMiddle {
+  height: 300px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.text-white {
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .containerBox,
+  .navbar__nav {
+    flex-flow: column;
+    min-width: 100%;
+  }
+  .navbar {
+    z-index: 1;
+  }
+  .socialMedia {
+    z-index: 2;
+  }
+  .socialMedia__icons {
+    flex-flow: column;
+  }
+  .socialMedia__item {
+    margin: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+@import 'functions';
+@mixin box{
+    min-width: 1170px;
+    margin:auto;
+    padding: 1.5rem 0;
+    width: 100%;
+    position: relative;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content:space-evenly;
+}

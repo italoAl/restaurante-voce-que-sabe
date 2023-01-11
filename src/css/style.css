@@ -5,6 +5,78 @@
   box-sizing: border-box;
 }
 
+#card1 {
+  background-image: url(/assets/food/abstract-gf47f4e5d1_1920.jpg);
+  background-size: cover;
+}
+#card1 h2::before {
+  content: "ham";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+
+#card2 {
+  background-image: url(/assets/food/barbecue-g4c8d4aa81_1920.jpg);
+  background-size: cover;
+}
+#card2 h2::before {
+  content: "barbecue";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+
+#card3 {
+  background-image: url(/assets/food/cookies-gb9765aee6_1920.jpg);
+  background-size: cover;
+}
+#card3 h2::before {
+  content: "cookie";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+
+#card4 {
+  background-image: url(/assets/food/pancakes-g91031c6a8_1920.jpg);
+  background-size: cover;
+}
+#card4 h2::before {
+  content: "pancake";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+
+#card5 {
+  background-image: url(/assets/food/pasta-gdc8248a12_1920.jpg);
+  background-size: cover;
+}
+#card5 h2::before {
+  content: "pasta";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+
+#card6 {
+  background-image: url(/assets/food/pizza-g0d66a5ff8_1920.jpg);
+  background-size: cover;
+}
+#card6 h2::before {
+  content: "pizza";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+
 .navbar__nav, .socialMedia__icons {
   list-style: none;
 }
@@ -31,6 +103,26 @@
 }
 .navbar__link:hover {
   color: red;
+}
+
+.servicos {
+  min-width: 1170px;
+  margin: auto;
+  padding: 1.5rem 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.servicos__card {
+  width: 31%;
+  margin-bottom: 1rem;
+  margin: 1rem;
+  height: 400px;
+  box-shadow: 8px 8px 10px #999;
 }
 
 .m-1 {

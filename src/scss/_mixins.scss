@@ -11,3 +11,28 @@
     display: flex;
     justify-content:space-evenly;
 }
+
+$imgs: ("ham":"abstract-gf47f4e5d1_1920.jpg",
+"barbecue":"barbecue-g4c8d4aa81_1920.jpg",
+"cookie":"cookies-gb9765aee6_1920.jpg",
+"pancake":"pancakes-g91031c6a8_1920.jpg",
+"pasta":"pasta-gdc8248a12_1920.jpg",
+"pizza":"pizza-g0d66a5ff8_1920.jpg"
+);
+
+$n:0;
+@each $titulo,$url in $imgs{
+    $n:$n+1;
+#card#{$n}{
+    background-image: url(/assets/food/#{$url});
+    background-size: cover;
+
+    & h2::before{
+        content:'#{$titulo}';
+        display: block;
+        background-color: rgba(0, 0, 0, 0.8);
+        color:#fff;
+        padding: 0.7rem 0.5rem;
+    }
+}
+}

@@ -33,8 +33,19 @@
 .socialMedia__icons {
     @extend %list-none;
 }
-
-
+.servicos{
+    @include mx.box;
+    @include mx.flex-center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.servicos__card{
+    width: 31%;
+    margin-bottom: v.$m1;
+    margin: v.$m1;
+    height: 400px;
+    box-shadow: 8px 8px 10px #999;
+}
 .m-1 {
     margin: v.$m1;
 }
@@ -79,11 +90,11 @@
     }
     .socialMedia{
         z-index:2;
-    &__icons {
+    }
+    .socialMedia__icons {
         flex-flow: column;
     }
-    &__item{
+    .socialMedia__item{
         margin:v.$m1;
     }
-}
 }

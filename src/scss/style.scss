@@ -16,36 +16,41 @@
     width: 100%;
     background-color: v.$bgColorNav;
 
-&__nav{
-    @extend %list-none;
-}
-&__link {
-    color: v.$linkHover;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    text-decoration: none;
+    &__nav {
+        @extend %list-none;
+    }
 
-    &:hover {
-        color: v.$link;
+    &__link {
+        color: v.$linkHover;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        text-decoration: none;
+
+        &:hover {
+            color: v.$link;
         }
     }
 }
+
 .socialMedia__icons {
     @extend %list-none;
 }
-.servicos{
+
+.servicos {
     @include mx.box;
     @include mx.flex-center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.servicos__card{
+
+.servicos__card {
     width: 31%;
     margin-bottom: v.$m1;
     margin: v.$m1;
     height: 400px;
     box-shadow: 8px 8px 10px #999;
 }
+
 .m-1 {
     margin: v.$m1;
 }
@@ -77,24 +82,71 @@
     color: v.$linkHover;
 }
 
+.footer {
+    @include mx.box;
+    @include mx.flex-center;
+    background-color: v.$bgColorNav;
 
-@media(max-width:1100px) {
+    &__navbar {
+        @include mx.flex-center;
+        background-color: rgba($color: #000000, $alpha: 1.0);
 
-    .containerBox,
-    .navbar__nav {
-        flex-flow: column;
-        min-width: 100%;
+        &__link {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &__nav {
+            @extend %list-none;
+            flex-flow: column;
+        }
     }
-    .navbar{
-        z-index:1;
-    }
-    .socialMedia{
-        z-index:2;
-    }
-    .socialMedia__icons {
-        flex-flow: column;
-    }
-    .socialMedia__item{
-        margin:v.$m1;
-    }
+    &__socialMedia{
+        &__icons{
+            flex-flow: column;
+            @extend %list-none;
+        }
+        &__item{
+            margin-bottom: v.$m1;
+        }
+    } 
 }
+
+
+
+    @media(max-width:1100px) {
+
+        .containerBox,
+        .navbar__nav {
+            flex-flow: column;
+            min-width: 100%;
+        }
+
+        .navbar {
+            z-index: 1;
+        }
+
+        .socialMedia {
+            z-index: 2;
+        }
+
+        .socialMedia__icons {
+            flex-flow: column;
+        }
+
+        .socialMedia__item {
+            margin: v.$m1;
+        }
+        .footer{
+            flex-flow: column;
+            min-width: 100%;
+            }
+            .footer__navbar{
+                justify-content: flex-start;
+                margin-bottom: v.$m1;
+            }
+            .footer__socialMedia__icons{
+                flex-flow: row;
+                margin-bottom: v.$m1;
+            }
+    }

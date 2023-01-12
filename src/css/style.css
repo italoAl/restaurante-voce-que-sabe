@@ -77,7 +77,7 @@
   padding: 0.7rem 0.5rem;
 }
 
-.navbar__nav, .socialMedia__icons {
+.navbar__nav, .socialMedia__icons, .footer__navbar__nav, .footer__socialMedia__icons {
   list-style: none;
 }
 
@@ -143,7 +143,7 @@
   padding: 1.5rem 0;
   width: 100%;
   position: relative;
-  background-image: url("/assets/background/restaurantebg.jpg");
+  background-image: url("TEX-Restaurante/projetoRestaurante/assets/background/restaurantebg.jpg");
   background-size: 88%;
   background-position-y: -310px;
 }
@@ -159,6 +159,35 @@
 
 .text-white {
   color: #fff;
+}
+
+.footer {
+  min-width: 1170px;
+  margin: auto;
+  padding: 1.5rem 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.footer__navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+}
+.footer__navbar__link {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__navbar__nav {
+  flex-flow: column;
+}
+.footer__socialMedia__icons {
+  flex-flow: column;
+}
+.footer__socialMedia__item {
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1100px) {
@@ -178,6 +207,18 @@
   }
   .socialMedia__item {
     margin: 1rem;
+  }
+  .footer {
+    flex-flow: column;
+    min-width: 100%;
+  }
+  .footer__navbar {
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+  .footer__socialMedia__icons {
+    flex-flow: row;
+    margin-bottom: 1rem;
   }
 }
 
